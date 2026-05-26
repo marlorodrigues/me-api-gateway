@@ -1,0 +1,65 @@
+DATA STATUS ENUM: (ACTIVE, DEACTIVATED, PENDING, BLOCKED)
+ORDER STATUS ENUM: (ALL_CLOSED, PARTIAL_CLOSED, CANCELLED, PENDING)
+ORDER TYPE ENUM: (SELL, BUY)
+
+
+Users:
+  - user_id
+  - email
+  - status
+  - name
+  - personal_doc
+  - created_at
+  - updated_at
+
+AssetsTypes:
+  - assettype_id
+  - type name (stock, reit, option, subscription_stock)
+  - created_at
+
+Assets:
+  - asset_id
+  - company_id
+  - assettype_id
+  - status
+  - ticker
+  - created_at
+  - update_at
+
+Portfolios:
+  - portfolio_id
+  - user_id
+  - created_at
+  - updated_at
+
+PortfolioAssets:
+  - portfolioasset_id
+  - asset_id
+  - portfolio_id
+  - status
+  - total_amount
+  - average_price
+  - created_at
+  - update_at
+
+Companies:
+  - company_id
+  - name
+  - status
+  - created_at
+  - update_at
+
+Guarantees:
+  - guarantee_id
+  - portfolioasset_id
+  - total_amount
+  - created_at
+
+Brokers:
+  - broker_id
+  - name
+  - status
+  - created_at
+  - updated_at
+
+

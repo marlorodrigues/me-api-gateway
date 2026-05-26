@@ -1,0 +1,47 @@
+{
+  "name": "me-api-gateway",
+  "version": "0.0.1",
+  "description": "API Gateway for Moon Exchange",
+  "keywords": [
+    "API",
+    "Moon",
+    "Exchange",
+    "Typescript"
+  ],
+  "homepage": "https://github.com/marlorodrigues/me-api-gateway#readme",
+  "bugs": {
+    "url": "https://github.com/marlorodrigues/me-api-gateway/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlorodrigues/me-api-gateway.git"
+  },
+  "license": "ISC",
+  "author": "Marlo Rodrigues",
+  "type": "commonjs",
+  "main": "src/server.ts",
+  "scripts": {
+    "build": "npx tsc --removeComments true --pretty false #--listEmittedFiles true",
+    "prisma:migrate": "npx prisma migrate dev --schema ./prisma/schema.prisma --name",
+    "prisma:generate": "npx prisma generate --schema ./prisma/schema.prisma",
+    "prisma:studio": "npx prisma studio --schema ./prisma/schema.prisma",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.35.0",
+    "@influxdata/influxdb-client-apis": "^1.35.0",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "influx": "^5.12.0",
+    "pg": "^8.21.0"
+  }
+}

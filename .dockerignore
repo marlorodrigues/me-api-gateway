@@ -1,0 +1,10 @@
+node_modules
+.git
+.vscode
+tmp
+docs
+.env
+README.md
+swagger.yaml
+build
+*.tests.ts
